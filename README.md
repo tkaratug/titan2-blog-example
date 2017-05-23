@@ -3,7 +3,8 @@ Titan 2 Web Framework ile kodlanmış örnek blog uygulaması.
 
 # Kurulum
 - Dosyaları indirip sunucunuza yükleyin,
-- ``App/Config/Database.php`` dosyasında **DB bağlantı ayarlarını** yapın,
+- ``/Public`` dizinini çalıştıran virtual host tanımlayın,
+- ``/App/Config/Database.php`` dosyasında **DB bağlantı ayarlarını** yapın,
 - Aşağıdaki komutu çalıştırıp bağımlılıkları indirin;
 ```sh
 $ composer update
