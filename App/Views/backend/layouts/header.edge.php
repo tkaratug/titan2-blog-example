@@ -1,7 +1,7 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="/backend" class="logo">
+    <a href="{{ link_to('backend') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>T2</b>B</span>
         <!-- logo for regular state and mobile devices -->
@@ -16,7 +16,7 @@
         </a>
 
         <ul class="nav navbar-nav">
-			<li class="user user-menu"><a href="/" target="_blank"><i class="fa fa-external-link"></i> Siteye Git</a></li>
+			<li class="user user-menu"><a href="{{ link_to() }}" target="_blank"><i class="fa fa-external-link"></i> Siteye Git</a></li>
 		</ul>
 
         <!-- Navbar Right Menu -->
@@ -25,7 +25,7 @@
             <ul class="nav navbar-nav">
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="user user-menu">
-                    <a href="{!! base_url('logout') !!}">
+                    <a href="{{ link_to('logout') }}">
                         <i class="fa fa-sign-out"></i> Çıkış Yap
                     </a>
                 </li>

@@ -15,10 +15,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="/">Blog</a>
+                    <a href="{{ link_to() }}">Blog</a>
                 </li>
                 <li>
-                    <a href="/backend">Yönetici</a>
+                    <a href="{{ link_to('backend') }}">Yönetici</a>
                 </li>
             </ul>
         </div>

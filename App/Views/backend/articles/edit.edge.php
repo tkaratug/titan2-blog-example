@@ -10,8 +10,8 @@
     <section class="content-header">
         <h1>Yazı Düzeltme</h1>
         <ol class="breadcrumb">
-            <li><a href="/backend"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="/backend/articles">Yazılar</a></li>
+            <li><a href="{{ link_to('backend') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{{ link_to('backend/articles') }}">Yazılar</a></li>
             <li class="active">Yazı Düzeltme</li>
         </ol>
     </section>
@@ -29,7 +29,7 @@
 
         <div class="row">
 
-            {!! Form::open(['role' => 'form', 'action' => base_url('backend/articles/update/' . $article->articleId), 'method' => 'post']) !!}
+            {!! Form::open(['role' => 'form', 'action' => link_to('backend/articles/update/' . $article->articleId), 'method' => 'post']) !!}
             {!! Form::hidden('_token', ['value' => csrf_token()]) !!}
             <div class="col-xs-9">
                 <div class="box">

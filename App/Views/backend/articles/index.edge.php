@@ -12,7 +12,7 @@
     <section class="content-header">
         <h1>Yazılar</h1>
         <ol class="breadcrumb">
-            <li><a href="/backend"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{{ link_to('backend') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li class="active">Yazılar</li>
         </ol>
     </section>
@@ -34,7 +34,7 @@
                     <div class="box-header with-border">
                         <h3 class="box-title"><i class="fa fa-edit"></i> Tüm Yazılar</h3>
                         <div class="pull-right">
-                            <a href="/backend/articles/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Yeni Yazı</a>
+                            <a href="{{ link_to('backend/articles/create') }}" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Yeni Yazı</a>
                         </div>
                     </div>
                     <div class="box-body">
@@ -61,10 +61,10 @@
                                     <td>{{ Date::set($article->createdAt)->get('d.m.Y H:i:s') }}</td>
                                     <td>@if($article->status == 1) <span class="label label-success">Yayında</span> @else <span class="label label-danger">Yayında Değil</span> @endif</td>
                                     <td>
-                                        <a href="/backend/articles/edit/{{ $article->articleId }}" data-toggle="tooltip" data-placement="top" data-original-title="Düzelt" class="btn btn-xs btn-warning">
+                                        <a href="{{ link_to('backend/articles/edit/' . $article->articleId) }}" data-toggle="tooltip" data-placement="top" data-original-title="Düzelt" class="btn btn-xs btn-warning">
                                             <i class="fa fa-pencil"></i>
                                         </a>
-                                        <a href="/backend/articles/delete/{{ $article->articleId }}" data-toggle="tooltip" data-placement="top" data-original-title="Sil"
+                                        <a href="{{ link_to('backend/articles/delete/' . $article->articleId) }}" data-toggle="tooltip" data-placement="top" data-original-title="Sil"
                                             class="btn btn-xs btn-danger deleteArticle">
                                             <i class="fa fa-trash"></i>
                                         </a>

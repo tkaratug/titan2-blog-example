@@ -12,7 +12,7 @@
     <section class="content-header">
         <h1>Kategoriler</h1>
         <ol class="breadcrumb">
-            <li><a href="/backend"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{{ link_to('backend') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li class="active">Kategoriler</li>
         </ol>
     </section>
@@ -34,7 +34,7 @@
                     <div class="box-header with-border">
                         <h3 class="box-title"><i class="fa fa-list"></i> Kategoriler</h3>
                         <div class="pull-right">
-                            <a href="/backend/categories/create" data-toggle="modal" data-target="#remoteModal" data-backdrop="static" data-keyboard="false" class="btn btn-sm btn-success">
+                            <a href="{{ link_to('backend/categories/create') }}" data-toggle="modal" data-target="#remoteModal" data-backdrop="static" data-keyboard="false" class="btn btn-sm btn-success">
                                 <i class="fa fa-plus"></i> Yeni Kategori
                             </a>
                         </div>
@@ -61,11 +61,11 @@
                                     <td>{{ $category->categorySlug }}</td>
                                     <td>{{ Date::set($category->createdAt)->get('d.m.Y H:i:s') }}</td>
                                     <td>
-                                        <a href="/backend/categories/edit/{{ $category->categoryId }}" data-tooltip="tooltip" data-placement="top" data-original-title="Düzelt" class="btn btn-xs btn-warning"
+                                        <a href="{{ link_to('backend/categories/edit/' . $category->categoryId) }}" data-tooltip="tooltip" data-placement="top" data-original-title="Düzelt" class="btn btn-xs btn-warning"
                                             data-toggle="modal" data-target="#remoteModal" data-backdrop="static" data-keyboard="false">
                                             <i class="fa fa-pencil"></i>
                                         </a>
-                                        <a href="/backend/categories/delete/{{ $category->categoryId }}" data-tooltip="tooltip" data-placement="top" data-original-title="Sil"
+                                        <a href="{{ link_to('backend/categories/delete/' . $category->categoryId) }}" data-tooltip="tooltip" data-placement="top" data-original-title="Sil"
                                             class="btn btn-xs btn-danger deleteCategory">
                                             <i class="fa fa-trash"></i>
                                         </a>

@@ -57,7 +57,7 @@ class Admin
             }
         }
 
-        Session::setFlash($flash, base_url('backend/admin'));
+        Session::setFlash($flash, link_to('backend/admin'));
     }
 
 }

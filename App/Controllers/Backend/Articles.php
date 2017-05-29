@@ -147,7 +147,7 @@ class Articles
              }
          }
 
-         Session::setFlash($flash, base_url('backend/articles/edit/' . $articleId));
+         Session::setFlash($flash, link_to('backend/articles/edit/' . $articleId));
      }
 
      /**

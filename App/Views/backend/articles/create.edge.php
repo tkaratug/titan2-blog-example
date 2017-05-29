@@ -10,8 +10,8 @@
     <section class="content-header">
         <h1>Yeni Yazı</h1>
         <ol class="breadcrumb">
-            <li><a href="/backend"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="/backend/articles">Yazılar</a></li>
+            <li><a href="{{ link_to('backend') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{{ link_to('backend/articles') }}">Yazılar</a></li>
             <li class="active">Yeni Yazı</li>
         </ol>
     </section>

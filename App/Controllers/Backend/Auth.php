@@ -31,16 +31,16 @@ class Auth
             foreach (Validation::errors() as $error) {
                 $messages .= $error . '<br>';
             }
-            Session::setFlash($messages, base_url('login'));
+            Session::setFlash($messages, link_to('login'));
         } else {
             $login = Model::run('auth', 'backend')->login($usermail, $userpass);
 
             if ($login !== false) {
                 Session::set(['logged' => true, 'user_id' => $login->userId, 'usermail' => $login->usermail]);
 
-                redirect(base_url('backend'));
+                redirect(link_to('backend'));
             } else {
-                Session::setFlash('Hatalı giriş', base_url('login'));
+                Session::setFlash('Hatalı giriş', link_to('login'));
             }
 
         }
@@ -49,6 +49,6 @@ class Auth
     public function logout()
     {
         Session::delete();
-        redirect(base_url('login'));
+        redirect(link_to('login'));
     }
 }

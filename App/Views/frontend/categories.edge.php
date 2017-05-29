@@ -41,7 +41,7 @@
 
             <ul class="list-unstyled">
             @foreach($categories as $category)
-            <li><a href="/categories/{{ $category->categorySlug }}">{{ $category->categoryName }}</a></li>
+            <li><a href="{{link_to('categories/' . $category->categorySlug) }}">{{ $category->categoryName }}</a></li>
             @endforeach
             </ul>
 

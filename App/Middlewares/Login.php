@@ -9,7 +9,7 @@ class Login
 	public static function handle()
 	{
 		if (Session::has('logged')) {
-			redirect(base_url('backend'));
+			redirect(link_to('backend'));
 		}
 	}
 

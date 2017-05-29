@@ -8,7 +8,7 @@
     <section class="content-header">
         <h1>Blog Yönetim Paneli</h1>
         <ol class="breadcrumb">
-            <li><a href="/backend"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{{ link_to('backend') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         </ol>
     </section>
 

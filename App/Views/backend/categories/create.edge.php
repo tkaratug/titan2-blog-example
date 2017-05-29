@@ -62,7 +62,7 @@
         }
 
         $.ajax({
-            url: "/backend/categories/save",
+            url: "{{ link_to('backend/categories/save') }}",
             method: "post",
             data: $('#saveCategory').serialize(),
             success: function(data)
